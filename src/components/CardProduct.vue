@@ -2,7 +2,7 @@
     <div class="card mb-3" style="max-width: 580px;">
         <div class="row g-0">
             <div class="col-md-4">
-                <img :src="require('@/assets/img/'+producto.img)" class="img-fluid rounded-start" alt="...">
+                <img :src="require('@/assets/img/'+producto.img)" class="productImg rounded-start" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body contenedorBody">
@@ -57,5 +57,8 @@ export default {
         font-family: 'Sriracha', cursive;
         margin-bottom: 5px;
     }
-
+    .productImg{
+        width: 250px;
+        height: 180px;
+    }
 </style>

@@ -21,11 +21,19 @@
                         <td>{{item.id}}</td>
                         <td>{{item.titulo}}</td>
                         <td>{{item.qty}}</td>
-                        <td>{{item.pu}}</td>
-                        <td>{{item.pu}}</td>
+                        <td>$ {{item.pu}}</td>
+                        <td>$ {{multiplicar(item.pu, item.qty)}}</td>
                         <td><i class="bi bi-trash3-fill"></i></td>
                     </tr>
                 </tbody>
+                <tfoot class="table-group-divider">
+                    <tr>
+                        <td colspan="3"></td>
+                        <td>Total Ticket</td>
+                        <td>$ {{total}}</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
         <div class="buttonCartContainter">
@@ -41,9 +49,14 @@ export default {
     name:'CartDetail',
     props:{
         items:Array,
-    }
-
-}
+        total:Number,
+    },
+    methods: {
+        multiplicar(a,b) {
+            return a*b
+        },
+    },
+}  
 </script>
 
 <style scoped>

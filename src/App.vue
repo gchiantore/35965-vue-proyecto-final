@@ -6,9 +6,9 @@
     <SeparadorComponentes titulo1="Formulario de Registro" titulo2="UserReg.vue"></SeparadorComponentes>
     <UserReg></UserReg>
     <SeparadorComponentes titulo1="Simulador de Carrito" titulo2="CartDetail.vue"></SeparadorComponentes>
-    <CartDetail :items="carrito"></CartDetail>
+    <CartDetail :items="carrito" :total="total"></CartDetail>
     <SeparadorComponentes titulo1="Detalle de un Producto" titulo2="ProductDetail.vue"></SeparadorComponentes>
-    <ProductDetail :product="products[0]"></ProductDetail>
+    <ProductDetail :product="products[2]"></ProductDetail>
     <SeparadorComponentes titulo1="Listado de Productos" titulo2="ProductList.vue contiene a CardProduct.vue"></SeparadorComponentes>
     <ProductList :productos="products"></ProductList>
   </div>
@@ -36,10 +36,11 @@ export default {
   },
   data(){
     return{
+        total:5600,
         products:[
             {
                 id:"PMUSA01",
-                img:"lamusa2.png",
+                img:"muzza.png",
                 titulo:"La Mussa !",
                 desc:"Si, e'la mas barata pero es potentaza",
                 info1:"Masa crujiente como billetera a fin de mes, salada con autentica sal cordobeza de la Laguna Mar Chiquita, con tomates choriados de la quinta del tio Luis, y la mussa de la queseria de la suegra de Calamaro!",
@@ -49,7 +50,7 @@ export default {
             },
             {
                 id:"PESPE01",
-                img:"lamusa2.png",
+                img:"special.png",
                 titulo:"La Especial !",
                 desc:"Mamita que pizza!",
                 info1:"Masa crujiente como billetera a fin de mes, salada con autentica sal cordobeza de la Laguna Mar Chiquita, con tomates choriados de la quinta del tio Luis, Jamon del Diome y la mussa de la queseria de la suegra de Calamaro!",
@@ -58,8 +59,8 @@ export default {
                 precio:1450,
             },
             {
-                id:"PPALMI01",
-                img:"lamusa2.png",
+                id:"PPALM01",
+                img:"palmera.png",
                 titulo:"La Palmera!",
                 desc:"Terrible Pizza!",
                 info1:"Masa crujiente como billetera a fin de mes, salada con autentica sal cordobeza de la Laguna Mar Chiquita, con tomates choriados de la quinta del tio Luis, Jamon del diome, palmitos mas frescos que 1 de Julio y la mussa de la queseria de la suegra de Calamaro!",
@@ -69,7 +70,7 @@ export default {
             },
             {
                 id:"PCHAM01",
-                img:"lamusa2.png",
+                img:"ztas.png",
                 titulo:"La Zetas! !",
                 desc:"No puede mas, lo mejor de lo mejor",
                 info1:"Masa crujiente como billetera a fin de mes, salada con autentica sal cordobeza de la Laguna Mar Chiquita, con tomates choriados de la quinta del tio Luis, con homgos extraido de la base del Champaqui durante los temporales de Junio y la mussa de la queseria de la suegra de Calamaro!",
@@ -94,7 +95,7 @@ export default {
            {
               id:"PMUSA01",
               titulo:"La Mussa !",
-              qty:1,
+              qty:2,
               pu:1250,
            },
 
